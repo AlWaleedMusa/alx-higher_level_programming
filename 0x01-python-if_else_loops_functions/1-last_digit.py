@@ -3,15 +3,14 @@ import random
 number = random.randint(-10000, 10000)
 
 string = str(number)
-last_digit = string[-1]
+last_digit = int(string[-1])
 
-if int(last_digit) > 5:
-    print(f"Last digit of {string} is {last_digit} and is greater than 5")
-elif int(last_digit) < 6 and int(last_digit) != 0:
-    if int(last_digit) < 0:
-        nlast_digit = int(last_digit) * -1
-        print(f"Last digit of {string} is {nlast_digit} and is less than 6 and not 0")
-    else:
-        print(f"Last digit of {string} is {last_digit} and is less than 6 and not 0")
-elif int(last_digit) == 0:
-    print(f"Last digit of {string} is {last_digit} and is 0")
+if last_digit > 5:
+    print(f"Last digit of {number:d} is {last_digit:d} and is greater than 5")
+elif last_digit < 6 and last_digit > 0:
+    print(f"Last digit of {number:d} is {last_digit:d} and is less than 6 and not 0")
+elif last_digit < 6 and last < 0:
+    n_digit = last_digit * -1
+    printf(f"Last digit of {number:d} is {n_digit:d} and is less than 6 and not 0")
+elif last_digit == 0:
+    print(f"Last digit of {number:d} is {last_digit:d} and is 0")
