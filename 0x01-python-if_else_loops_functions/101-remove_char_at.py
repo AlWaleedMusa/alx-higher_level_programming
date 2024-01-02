@@ -5,4 +5,4 @@ def remove_char_at(str, n):
 
     li = list(str)
     li.pop(n)
-    return("".join(li))
+    return ("".join(li))
