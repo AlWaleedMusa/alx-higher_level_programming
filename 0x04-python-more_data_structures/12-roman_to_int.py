@@ -21,5 +21,7 @@ def roman_to_int(roman_string):
             num += 500
         elif simp == "M":
             num += 1000
+        else:
+            num += 0
 
     return num
