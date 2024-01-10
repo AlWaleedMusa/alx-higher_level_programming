@@ -10,4 +10,5 @@ def only_diff_elements(set_1, set_2):
         if num in set_1:
             continue
         new.add(num)
+
     return(new)
