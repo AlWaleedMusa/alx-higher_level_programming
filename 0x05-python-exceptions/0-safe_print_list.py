@@ -2,7 +2,7 @@
 
 def safe_print_list(my_list=[], x=0):
 
-    if my_list == None:
+    if my_list is None:
         return 0
 
     counter = 0
