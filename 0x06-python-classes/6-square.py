@@ -52,16 +52,17 @@ class Square:
 
     def my_print(self):
         """
-        Print a square with the character #
+        Print a square with the character # at position given
         """
 
         if self.__size == 0:
             print()
-        else:
-            for row in range(self.__size):
-                for column in range(self.__size):
-                    print("#", end="")
-                print()
+            return
+        for j in range(self.__position[1]):
+            print()
+        for i in range(self.__size):
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
 
     @property
     def position(self):
