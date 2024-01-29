@@ -1,0 +1,93 @@
+==============================
+Usage of ```say_my_name```
+==============================
+
+This Module define print a first name and a last name passed as parameters using say_my_name
+
+=====
+Usage
+=====
+
+say_my_name is a function that take two arguments as first name and last name and print
+My name is first name last name and if no last name passed will print my name is first name
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+::
+
+================
+Case: String
+================
+
+::
+
+	>>> say_my_name("Waleed", "Musa")
+	My name is Waleed Musa
+
+::
+
+	>>> say_my_name("Waleed")
+	My name is Waleed 
+
+::
+
+	>>> say_my_name("WALEED", "musa")
+	My name is WALEED musa
+
+::
+
+	>>> say_my_name("W", "musa")
+	My name is W musa
+
+::
+
+	>>> say_my_name("waleed", "m")
+	My name is waleed m
+
+::
+
+	>>> say_my_name("w")
+	My name is w 
+
+::
+
+
+The function can also work with long names
+================
+Case: Long string
+================
+
+::
+
+	>>> say_my_name("Waleed Jad alakareem", "Musa Madibo")
+	My name is Waleed Jad alakareem Musa Madibo
+
+::
+
+
+The function can handle wrong kind of input and will raise different kind of Errors
+================
+Case: Exceptions
+================
+
+::
+
+	>>> say_my_name(["waleed", "musa"], "waleed")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name(123, "waleed")
+	Traceback (most recent call last):	
+	TypeError: first_name must be a string
+
+::
+
+	>>> say_my_name("waleed", 123)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+::

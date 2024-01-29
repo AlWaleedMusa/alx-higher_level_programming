@@ -1,0 +1,93 @@
+==============================
+Usage of ```add_integer```
+==============================
+
+This Module define tests cases for addition function using add_integer
+
+=====
+Usage
+=====
+
+add_integer is a function that ad 2 numbers (int, float) and return an int or raise a type
+type error if a or b is not a number
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+::
+
+================
+Case: Numbers (int)
+================
+
+::
+
+	>>> add_integer(1, 2)
+	3
+
+::
+
+	>>> add_integer(-1, -5)
+	-6
+
+::
+
+	>>> add_integer(9223372036854775806, 1)
+	9223372036854775807
+
+::
+
+	>>> add_integer(2)
+	100
+
+::
+
+
+The function can also work with floats
+================
+Case: Numbers (float)
+================
+
+::
+
+	>>> add_integer(1.5, 1.5)
+	2
+
+::
+
+	>>> add_integer(3.1, 55.2)
+	58
+
+::
+
+	>>> add_integer(-4.2, 0)
+	-4
+
+::
+
+
+The function can handle wrong kind of input and will raise different kind of Errors
+================
+Case: Exceptions
+================
+
+::
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+::
+
+	>>> add_integer("a", 1)
+	Traceback (most recent call last):	
+	TypeError: a must be an integer or float
+
+::
+
+	>>> add_integer("a", "b")
+	Traceback (most recent call last):
+	TypeError: a must be an integer or float
+
+::

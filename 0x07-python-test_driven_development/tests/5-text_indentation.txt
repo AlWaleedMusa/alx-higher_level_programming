@@ -1,0 +1,87 @@
+==============================
+Usage of ```text_indentation```
+==============================
+
+This Module define how to handel a paragraph and print new line when special characters are encountered using text_indentation
+
+=====
+Usage
+=====
+
+text_indentation is a function that print 2 new line when special character are encountered and return nothing
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+::
+
+================
+Case: strings
+================
+
+::
+
+	>>> text_indentation("""Lorem ipsum dolor? sit amet, consectetur: adipiscing elit.""")
+	Lorem ipsum dolor?
+	<BLANKLINE>
+	sit amet, consectetur:
+	<BLANKLINE>
+	adipiscing elit.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation(".hi i am ? a robot.")
+	.
+	<BLANKLINE>
+	hi i am ?
+	<BLANKLINE>
+	a robot.
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation(".?:")
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+
+::
+
+	>>> text_indentation("   Hello human. This must be very        ?      awkward: no")
+	Hello human.
+	<BLANKLINE>
+	This must be very        ?
+	<BLANKLINE>
+	awkward:
+	<BLANKLINE>
+	no
+
+The function can handle wrong kind of input and will raise different kind of Errors
+================
+Case: Exceptions
+================
+
+::
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+::
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):	
+	TypeError: text must be a string
+
+::
+
+	>>> text_indentation(902931)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+::

@@ -1,0 +1,77 @@
+==============================
+Usage of ```print_square```
+==============================
+
+This Module define print squares according to a giving size using print_square
+
+=====
+Usage
+=====
+
+print_square is a function that print a square shape of # using a giving size and return nothing
+
+::
+
+	>>> print_square = __import__('4-print_square').print_square
+
+::
+
+================
+Case: numbers
+================
+
+::
+
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+::
+
+	>>> print_square(2)
+	##
+	##
+
+::
+
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+::
+
+
+The function can handle wrong kind of input and will raise different kind of Errors
+================
+Case: Exceptions
+================
+
+::
+
+	>>> print_square(-4)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+::
+
+	>>> print_square("name")
+	Traceback (most recent call last):	
+	TypeError: size must be an integer
+
+::
+
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+::
