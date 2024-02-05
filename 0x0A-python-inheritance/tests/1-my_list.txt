@@ -27,6 +27,5 @@ Case: ...
 
 	>>> my_list.print_sorted([])
 	[]
-::
 
 
