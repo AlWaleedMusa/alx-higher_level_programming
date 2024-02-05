@@ -1,0 +1,30 @@
+==============================
+Usage of ```my_list```
+==============================
+
+This Module define ... using my_list
+
+=====
+Usage
+=====
+
+print_sorted is a function that ... and return ...
+
+::
+
+	>>> my_list = __import__('1-my_list').MyList
+
+::
+
+================
+Case: ...
+================
+
+::
+
+	>>> my_list.print_sorted([3,2,1,4])
+	[1, 2, 3, 4]
+
+::
+
+
