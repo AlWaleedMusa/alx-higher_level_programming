@@ -2,6 +2,7 @@
 
 """ pascal triangle """
 
+
 def pascal_triangle(n):
     """ return a pascal triangle as a list"""
 
