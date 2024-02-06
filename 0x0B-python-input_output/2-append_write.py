@@ -8,7 +8,7 @@ def append_write(filename="", text=""):
 
     with open(filename, "a") as file:
         counter = 0
-        for char in file:
+        for char in text:
             file.write(char)
             counter += 1
         return counter
