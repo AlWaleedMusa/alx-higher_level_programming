@@ -12,16 +12,27 @@ class Student():
         self.age = age
 
     def to_json(self, attrs=None):
-        if attrs is None:
-            return self.__dict__.copy()
-        else:
-            result = {}
-            for attr in attrs:
-                if hasattr(self, attr):
-                    result[attr] = getattr(self, attr)
-            return result
+        """ Method that returns directory description """
+
+        object = self.__dict__.copy()
+        if type(attrs) is list:
+
+            for item in attrs:
+                if type(item) is not str:
+                    return object
+
+            d_list = {}
+
+            for i_atr in range(len(attrs)):
+                for s_atr in object:
+                    if attrs[i_atr] == s_atr:
+                        d_list[s_atr] = object[s_atr]
+            return d_list
+
+        return object
 
     def reload_from_json(self, json):
-        with open(json, "r") as file:
-            data = file.readline()
-            return data
+        """ Replaces all attributes of the Student instance """
+
+        for atr in json:
+            self.__dict__[atr] = json[atr]
