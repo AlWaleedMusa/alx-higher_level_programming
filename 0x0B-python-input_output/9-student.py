@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" """
+""" make a student class and return json from it attributes"""
 
 
 class Student():
