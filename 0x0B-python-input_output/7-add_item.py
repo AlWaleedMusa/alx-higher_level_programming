@@ -9,9 +9,12 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 if __name__ == "__main__":
-    args = []
+
+    try:
+        args = load_from_json_file("add_item.json")
+    except Exception:
+        args = []
 
     for arg in sys.argv[1:]:
         args.append(arg)
     save_to_json_file(args, "add_item.json")
-    print(load_from_json_file("add_item.json"))
