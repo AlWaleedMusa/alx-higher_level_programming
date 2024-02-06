@@ -14,4 +14,4 @@ if __name__ == "__main__":
     for arg in sys.argv[1:]:
         args.append(arg)
     save_to_json_file(args, "add_item.json")
-    load_from_json_file("add_item.json")
+    print(load_from_json_file("add_item.json"))
