@@ -5,12 +5,10 @@
 
 class BaseGeometry():
     """ a class that raise an exception are error"""
-
-
     def area(self):
         """ raise an exception"""
         raise Exception("area() is not implemented")
-    
+
     def integer_validator(self, name, value):
         """
         validate if input is a positive integer
@@ -51,7 +49,7 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         return "[Rectangle] {}/{}".format(self._width, self._height)
-    
+
     def area(self):
         return "{}".format(self._width * self._height)
 
