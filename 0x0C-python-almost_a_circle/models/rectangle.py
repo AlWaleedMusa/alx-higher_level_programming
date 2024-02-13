@@ -87,17 +87,17 @@ class Rectangle(Base):
 
     def area(self):
         """ return area of the rect"""
-        return self.__width * self.__height
+        return self.width * self.height
     
     def display(self):
         """ print rect using `#` """
-        for _ in range(self.__y):
+        for _ in range(self.y):
             print("\n", end="")
 
-        for _ in range(self.__height):
-            for _ in range(self.__x):
+        for _ in range(self.height):
+            for _ in range(self.x):
                 print(" ", end="")
-            for _ in range(self.__width):
+            for _ in range(self.width):
                 print("#", end="")
             print("")
 
@@ -150,8 +150,8 @@ class Rectangle(Base):
         """ make a dict out of the attributes"""
         return {
             "id" : self.id,
-            "width" : self.__width,
-            "height" : self.__height,
-            "x" : self.__x,
-            "y" : self.__y
+            "width" : self.width,
+            "height" : self.height,
+            "x" : self.x,
+            "y" : self.y
         }
