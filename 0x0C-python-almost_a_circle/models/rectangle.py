@@ -40,7 +40,7 @@ class Rectangle(Base):
     @property
     def width(self):
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if type(value) != int:
@@ -52,7 +52,7 @@ class Rectangle(Base):
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if type(value) != int:
@@ -64,7 +64,7 @@ class Rectangle(Base):
     @property
     def value_x(self):
         return self.__x
-    
+
     @value_x.setter
     def value_x(self, value):
         if type(value) != int:
@@ -76,7 +76,7 @@ class Rectangle(Base):
     @property
     def value_y(self):
         return self.__y
-    
+
     @value_y.setter
     def value_y(self, value):
         if type(value) != int:
@@ -88,7 +88,7 @@ class Rectangle(Base):
     def area(self):
         """ return area of the rect"""
         return self.width * self.height
-    
+
     def display(self):
         """ print rect using `#` """
         for _ in range(self.y):
@@ -129,7 +129,7 @@ class Rectangle(Base):
                 elif i == 4:
                     self.y = arg
                 i += 1
-        
+
         elif kwargs and len(kwargs) != 0:
             for key, value in kwargs.items():
                 if key == "id":
@@ -149,9 +149,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """ make a dict out of the attributes"""
         return {
-            "id" : self.id,
-            "width" : self.width,
-            "height" : self.height,
-            "x" : self.x,
-            "y" : self.y
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
         }
