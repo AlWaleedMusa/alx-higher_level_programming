@@ -9,6 +9,7 @@ class Base():
     """ class Base with 1 private attribute"""
 
     __nb_objects = 0
+
     def __init__(self, id=None):
         """ assign data to id"""
         if id is not None:
