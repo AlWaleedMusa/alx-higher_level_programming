@@ -1,9 +1,7 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0) {
-      return this;
-    } else {
+    if (w > 0 && typeof w === 'number' && h > 0 && typeof h === 'number') {
       this.width = w;
       this.height = h;
     }
