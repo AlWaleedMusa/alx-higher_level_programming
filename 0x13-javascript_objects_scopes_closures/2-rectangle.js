@@ -9,4 +9,4 @@ class Rectangle {
     }
   }
 }
-s = new Rectangle(-1, 3)
+module.exports = Rectangle
