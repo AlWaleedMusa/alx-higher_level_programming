@@ -16,7 +16,7 @@ if __name__ == "__main__":
     search = sys.argv[4]
 
     cur = db.cursor()
-    cur.execute('SELECT * FROM states WHERE name="{}"'.format(search))
+    cur.execute('SELECT * FROM states WHERE Binary name="{}"'.format(search))
     data = cur.fetchall()
     for row in data:
         print(row)
