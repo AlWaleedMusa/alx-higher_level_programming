@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  lists all states with a name starting with (upper N) database hbtn_0e_0_usa """
+"""displays all values in the states table of hbtn_0e_0_usa where name matches the argument"""
 
 import MySQLdb
 import sys
@@ -13,11 +13,12 @@ if __name__ == "__main__":
         port=3306,
     )
 
-    crs = db.cursor()
-    crs.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY states.id")
-    data = crs.fetchall()
+    search = sys.argv[4]
 
+    cur = db.cursor()
+    cur.execute('SELECT * FROM states WHERE name="{}"'.format(search))
+    data = cur.fetchall()
     for row in data:
         print(row)
-    crs.close()
+    cur.close()
     db.close()
