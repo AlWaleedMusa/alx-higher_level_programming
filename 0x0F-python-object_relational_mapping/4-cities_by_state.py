@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""displays all values in the states table of hbtn_0e_0_usa where name matches the argument and be safe"""
+"""lists all cities from the database hbtn_0e_4_usa"""
 
 import MySQLdb
 import sys
@@ -9,14 +9,15 @@ if __name__ == "__main__":
         host="localhost",
         user=sys.argv[1],
         passwd=sys.argv[2],
-        db=sys.argv[3],
+        db=sys.argv[2],
         port=3306,
     )
 
-    search = sys.argv[4]
-
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE %s", (search,))
+    cur.execute(
+        """SELECT cities.id, cities.name, states.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id"""
+    )
     data = cur.fetchall()
     for row in data:
         print(row)
