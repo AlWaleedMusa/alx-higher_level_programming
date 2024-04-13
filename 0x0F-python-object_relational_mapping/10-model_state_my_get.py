@@ -18,7 +18,8 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     engine = create_engine(
-        "mysql+mysqldb://{}:{}@localhost:3306/{}".format(username, password, database)
+        "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+            username, password, database)
     )
 
     Session = sessionmaker(bind=engine)
