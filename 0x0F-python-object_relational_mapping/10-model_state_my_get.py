@@ -28,6 +28,6 @@ if __name__ == "__main__":
     state = session.query(State).filter_by(name=state_name).first()
 
     if state:
-        print("{}: {}".format(state.id, state.name))
+        print("{}".format(state.id))
     else:
         print("Not found")
