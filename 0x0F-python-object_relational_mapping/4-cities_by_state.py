@@ -15,8 +15,9 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute(
-        """SELECT cities.id, cities.name, states.name FROM\
-                cities INNER JOIN states ON states.id=cities.state_id"""
+        """SELECT cities.id, cities.name, states.name FROM \
+            cities INNER JOIN states cities.state_id = state.id \
+            ORDER BY cities.id"""
     )
     data = cur.fetchall()
     for row in data:
