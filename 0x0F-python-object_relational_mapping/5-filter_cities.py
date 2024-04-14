@@ -22,7 +22,7 @@ if __name__ == "__main__":
                 cities INNER JOIN states ON states.id=cities.state_id
                 WHERE states.name=%s
                 ORDER BY cities.id ASC""",
-        (sys.argv[4])
+        (sys.argv[4],)
     )
     data = cur.fetchall()
     print(", ".join([x[0] for x in data]))
