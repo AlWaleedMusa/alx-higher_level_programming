@@ -12,7 +12,6 @@ if __name__ == "__main__":
 
     try:
         response = response.json()
-
         if response:
             print("[{}] {}".format(response.get("id"), response.get("name")))
         else:
