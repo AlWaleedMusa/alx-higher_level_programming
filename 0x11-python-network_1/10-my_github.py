@@ -11,9 +11,9 @@ def get_id(username, password):
     if response.status_code == 200:
         user_data = response.json()
         user_id = user_data["id"]
-        print(f"Your GitHub user ID is: {user_id}")
+        print(f"{user_id}")
     else:
-        print("Failed to retrieve user ID. Please check your credentials.")
+        print("None")
 
 
 if __name__ == "__main__":
