@@ -6,7 +6,7 @@ import sys
 
 
 def get_id(username, password):
-    url = f"https://api.github.com/users/{'alwaleedmusa'}"
+    url = f"https://api.github.com/users/{username}"
     response = requests.get(url, auth=(username, password))
     if response.status_code == 200:
         user_data = response.json()
