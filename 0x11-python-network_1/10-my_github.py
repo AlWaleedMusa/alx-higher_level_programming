@@ -11,7 +11,7 @@ def get_id(username, password):
     if response.status_code == 200:
         user_data = response.json()
         user_id = user_data["id"]
-        print(f"{user_id}")
+        print(user_id)
     else:
         print("None")
 
