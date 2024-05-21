@@ -9,14 +9,10 @@ request.get(url, function (error, response, body) {
     console.error('Error reading file:', error);
   }
   const films = JSON.parse(body).results;
-  let count = 0;
-  for (const film of films) {
-    for (const character of film.characters) {
-      if (character.includes('/18/')) {
-        count++;
-      }
-    }
-  }
-  console.log(count);
+  console.log(films.reduce((count, movie) => {
+    return movie.characters.find((character) => character.endsWith('/18/'))
+      ? count + 1
+      : count;
+  }, 0));
 }
 );
